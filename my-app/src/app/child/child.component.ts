@@ -1,32 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
-
+import { EventEmitter, Component, Output } from '@angular/core';
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit {
-  name = 'Алексей'
-  @Input() username: string;
-  _userAge:number;
-  @Input()
-  set userAge(age:number){
-    if(age<0){
-      this._userAge = 0
-    }
-    else if (age>100){
-      this._userAge = 100
-    }
-    else{
-      this._userAge = age;
-    }
+export class ChildComponent {
+  @Output() onChanged = new EventEmitter<boolean>();
+  change(increased){
+    this.onChanged.emit(increased);
   }
-  get userAge(){
-    return this._userAge;
-  }
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

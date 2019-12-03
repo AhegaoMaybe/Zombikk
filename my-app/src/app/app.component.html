@@ -1,7 +1,4 @@
 <div>
-    <h2>Добро пожаловать {{name}}!</h2>
-    <input type='text' [value]='name'>
-    <input type='text' [(ngModel)]='name' placeholder='name'>
-    <input type='number' [(ngModel)]='age' placeholder='age'>
-    <app-child [username]='name' [userAge]="age"></app-child>
+    <h2>Добро пожаловать {{clicks}}!</h2>
+    <app-child (onChanged)='onChanged($event)'></app-child>
 </div>
