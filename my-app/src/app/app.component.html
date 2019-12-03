@@ -2,5 +2,6 @@
     <h2>Добро пожаловать {{name}}!</h2>
     <input type='text' [value]='name'>
     <input type='text' [(ngModel)]='name' placeholder='name'>
-    <app-child></app-child>
+    <input type='number' [(ngModel)]='age' placeholder='age'>
+    <app-child [username]='name' [userAge]="age"></app-child>
 </div>
