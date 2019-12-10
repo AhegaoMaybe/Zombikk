@@ -7,7 +7,8 @@ import {FormsModule} from '@angular/forms';
 import { ChildComponent } from './child/child.component';
 import { HomeComponent } from './routing/home/home.component';
 import { AboutComponent } from './routing/about/about.component';
-import { NotFoundComponent } from './routing/not-found/not-found.component'
+import { NotFoundComponent } from './routing/not-found/not-found.component';
+import { ItemComponent } from './routing/item/item.component'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NotFoundComponent } from './routing/not-found/not-found.component'
     ChildComponent,
     HomeComponent,
     AboutComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    ItemComponent
   ],
   imports: [
     FormsModule,
