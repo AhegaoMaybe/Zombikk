@@ -1,1 +1,5 @@
-<h2>Добро пожаловать {{name}}!</h2>
+<div>
+    <p class="brd">Добро пожаловать {{name}}!</p>
+    <h2>Кол-во кликов {{clicks}}!</h2>
+    <app-child (onChanged)='onChanged($event)' [(UserName)]="name"></app-child>
+</div>
