@@ -1,16 +1,24 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent{
   name:string;
-
-  constructor(private route:Router){}
-  goHome(){
-    this.route.navigate([""])
+  clicks:number = 0;
+  onChanged(increased){
+    console.log('Вы вошли в ngOnChanged')
+    if(increased){
+      this.clicks = this.clicks + 1;
+    }
+    else{
+      this.clicks = this.clicks - 1;
+    }
   }
+  ngOnInit() { 
+    console.log('Вы в ngOnInit')
+  }
+  
 }
-
