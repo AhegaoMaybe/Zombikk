@@ -10,10 +10,12 @@ export class LoginComponent implements OnInit {
   password: string;
   entered:boolean;
   constructor() { }
-
+  
+  items = []
+  do(NewCity, NewCountry){
+    this.items.push({city:NewCity, country:NewCountry});
+  }
   ngOnInit() {
-    this.login = 'admin1';
-    this.password = 'admin1';
     this.entered= false;
   }
 
